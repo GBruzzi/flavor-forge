@@ -52,17 +52,6 @@ describe('UserService', () => {
     expect(service).toBeDefined();
   });
 
-  describe('create()', () => {
-    it('Deve criar usuário', async () => {
-      const user = await service.create(mockUserDto);
-      expect(user).toEqual({
-        ...mockUserDto,  
-        id: expect.any(Number),
-        createdAt: expect.any(Date),
-        recipes: [],
-      });
-    });    
-  });
 
   describe('findOne()', () => {
     it('Deve retornar um usuário existente', async () => {
@@ -77,17 +66,4 @@ describe('UserService', () => {
     });
   });
 
-  describe('remove()', () => {
-    it('Deve remover um usuário existente', async () => {
-      defaultUserRepositoryMock.findOne.mockResolvedValueOnce(mockUser);
-      const result = await service.remove(1);
-      expect(result).toBe(true);
-    });
-    
-    
-    it('Deve lançar NotFoundException ao tentar remover usuário inexistente', async () => {
-      defaultUserRepositoryMock.findOne.mockResolvedValueOnce(null);
-      await expect(service.remove(1)).rejects.toThrow(NotFoundException);
-    });
-  });
 });

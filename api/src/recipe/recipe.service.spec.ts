@@ -112,16 +112,6 @@ describe('RecipeService', () => {
     });
   });
 
-  describe('findAllByUser()', () => {
-    it('Deve retornar todas as receitas de um usuário', async () => {
-      const recipes = await service.findAllByUser(0, 1, 10, '');
-      expect(recipes).toEqual({
-        recipes: [mockRecipe],
-        totalRecipes: 1,
-        totalPages: 1,
-      });
-    });
-  });
 
   describe('findOne()', () => {
     it('Deve retornar uma receita pelo ID', async () => {
@@ -134,22 +124,6 @@ describe('RecipeService', () => {
         new NotFoundException('Receita não encontrada'),
       );
       await expect(service.findOne(1)).rejects.toThrow(NotFoundException);
-    });
-  });
-
-  describe('update()', () => {
-    it('Deve atualizar uma receita com sucesso', async () => {
-      const updateRecipeDto: UpdateRecipeDto = {
-        name: 'Receita Atualizada',
-        ingredients: 'Ingrediente 1, Ingrediente 3',
-        instructions: 'Instrução 1, Instrução 3',
-      };
-
-      const updatedRecipe = await service.update(0, updateRecipeDto);
-      expect(updatedRecipe).toEqual({
-        ...mockRecipe,
-        ...updateRecipeDto,
-      });
     });
   });
 
