@@ -62,3 +62,6 @@ O sistema tem 3 pastas principais : api (conteúdo do backend feito em nest) , u
 - **Validação de Dados**: Uso de `class-validator` para garantir que os dados de entrada sejam válidos.
 - **Tratamento de Erros**: Implementação de filtros de exceção personalizados para um gerenciamento eficiente de erros.
 - **Código limpo**: Código organizado e autoleiturável, projetado para ser claro e compreensível sem a necessidade de muitos comentários, alinhado aos princípios da Clean Architecture.
+- **Teste de rotas no Insomnia**: Visando maior testabilidade da aplicação, as rotas foram testas no insomnia .
+- **Armazenamento de senha criptografadas**: Para maior segurança de dados dos usuários, as senhas são armazenadas no banco criptografadas via bcrypt .
+- 
