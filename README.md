@@ -32,6 +32,7 @@ O sistema tem 3 pastas principais : api (conteúdo do backend feito em nest) , u
 - **Gestão de Receitas**: Adicionar, visualizar e excluir receitas.
 - **Listagem Paginada**: Exibição de receitas de forma paginada.
 - **Exclusão Lógica**: Soft-delete para exclusão de receitas, mantendo a integridade dos dados.
+ ![Soft delete](https://github.com/GBruzzi/flavor-forge/blob/main/images/Soft%20delete.png)
 - **Modal de receitas**: Exibição de todos os dados das receitas criadas.
 
 ### Diferenciais
@@ -64,4 +65,4 @@ O sistema tem 3 pastas principais : api (conteúdo do backend feito em nest) , u
 - **Código limpo**: Código organizado e autoleiturável, projetado para ser claro e compreensível sem a necessidade de muitos comentários, alinhado aos princípios da Clean Architecture.
 - **Teste de rotas no Insomnia**: Visando maior testabilidade da aplicação, as rotas foram testas no insomnia .
 - **Armazenamento de senha criptografadas**: Para maior segurança de dados dos usuários, as senhas são armazenadas no banco criptografadas via bcrypt .
-- 
+![Insomnia](https://github.com/GBruzzi/flavor-forge/blob/main/images/insomnia.png)
